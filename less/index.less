@@ -64,21 +64,227 @@ html {
 
 /*====== Jim start coding for digital resume ======*/ 
 
+@backgroundBlue: dodgerblue;
+@backgroundgrey: lightgrey;
+@fontcolor: black;
+@fontstyle: Arial;
+@fontsize: 2rem;
+@marginamt: 10px;
 
 .container {
     display: flex;
     max-width: 1000px;
     flex-wrap: wrap;
 	justify-content: flex-start;
-}
+	font-family: @fontstyle;
+	font-size: @fontsize;
 
-.header {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: flex-start;
-    width: 100%;
-    margin: 10px;
-	padding: 5px;
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-start;
+		width: 100%;
+		margin: 10px;
+		padding: 5px;
+		
+		@media (max-width: 500px){
+			justify-content: center;
+			margin: 10px;
+				
+			
+		}
+
+			
+	}
+
+	nav a{
+		width: 15%;
+		font-size: 1rem;
+		border: 2px solid transparent;
+		padding: 10px;
+		margin: 10px;
+		text-align: center;
+		border-radius: 10px;
+		text-decoration: none;
+		color: white;
+		background: @backgroundBlue;
 	
+	}
+
+	.main-section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		border: solid transparent;
+		border-radius: 45px;
+		margin: @marginamt;
+		background-color: @backgroundgrey;
+
+		#main-one {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			border-bottom: dotted lightgoldenrodyellow;
+
+			h1 {
+				margin-left: 20px;
+				margin-bottom: 10px;
+				justify-content: flex-start;
+				font-size: 4rem;
+
+				@media (max-width: 500px){
+					font-size: 2.5rem;
+				}
+			}
+			h2 {
+				margin-left: 20px;
+				margin-bottom: 10px;
+
+				@media (max-width: 500px){
+					font-size: 1.7rem;
+				}
+			}
+
+			#main-image {
+				width: 50%;
+				margin: 10px;
+				border: solid transparent;
+				border-radius: 45px;
+			}
+		}
+		#main-two {
+			
+			h4 {
+				margin: 40px 20px 10px 20px;
+				justify-content: flex-start;
+
+				@media (max-width: 500px){
+					font-size: 1.7rem;
+				}
+			}
+
+			button {
+				width: 15%;
+				font-size: 1.5rem;
+				border: 2px solid transparent;
+				padding: 10px;
+				margin-bottom: 20px;
+				margin-left: 20px;
+				text-align: center;
+				border-radius: 20px;
+				text-decoration: none;
+				color: white;
+				background: @backgroundBlue;
+
+				@media (max-width: 500px){
+					width: 40%;
+				}
+			}
+		}
+	}
+
+
+
+	.middle-section {
+		display: flex;
+		width: 100%;
+		margin: 10px;
+
+		@media (max-width:500px) {
+			flex-wrap: wrap;
+
+		}
+
+		#middle-one {
+			justify-content: flex-start;
+			width: 50%;
+			flex-wrap: wrap;
+			padding: 10px;
+
+			@media (max-width:500px) {
+				width: 100%;
+				flex-wrap: wrap;
+			}
+
+			h3 {
+				font-size: @fontsize;
+				font-style: @fontstyle;
+				margin: @marginamt;
+			}
+			h4 {
+				font-size: @fontsize;
+			}
+			
+		}
+
+		#middle-two {
+			#middle-one();
+			padding: 10px;
+
+			@media (max-width: 500px){
+				width: 100%;
+			}
+
+			h3 {
+				font-size: @fontsize;
+				font-style: @fontstyle;
+				margin: @marginamt;
+			}
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 100%;
+			}
+			
+			td, th {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			
+			tr:nth-child(even) {
+				background-color: #dddddd;
+			}
+		}
+	}
+
+
+
+	.bottom-section {
+		
+		flex-direction: column;
+		.middle-section();
+
+		h3 {
+			padding: 10px;
+			margin-left: 20px;
+			font-size: @fontsize;
+			font-style: @fontstyle;
+		}
+		.table {
+			width: 95%;
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+					
+			td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+			}
+	
+			tr:nth-child(even) {
+			background-color: #dddddd;
+			}
+		}
+	}
+
+
+	.footer {
+		margin: 30px;
+	}
 }
